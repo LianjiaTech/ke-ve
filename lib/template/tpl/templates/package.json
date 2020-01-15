@@ -1,0 +1,13 @@
+{
+	"name": "<%= meta.name%>",
+	"version": "1.0.0",
+	"description": "",
+	"author": "",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"test": "node index.js"
+	}
+}

@@ -1,0 +1,89 @@
+{
+  "name": "ke-ve",
+  "version": "0.10.16",
+  "description": "一站式的前端项目可视化服务集成平台",
+  "main": "index.js",
+  "bin": {
+    "ke-ve": "bin/ve"
+  },
+  "scripts": {
+    "start": "nodemon --exec 'node ./bin/ve service'",
+    "build:source": "cd service/assets && npm run build",
+    "i": "npm i &  cd service/assets && npm i",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "test": "jest",
+    "all": "nodemon --exec 'node ./bin/ve service' & cd service/assets && npm start"
+  },
+  "author": "hardbrave <qlihust@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "ve",
+    "可视化",
+    "服务集成",
+    "自定义开发"
+  ],
+  "dependencies": {
+    "@akryum/winattr": "^3.0.0",
+    "axios": "^0.19.0",
+    "better-opn": "^1.0.0",
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "cross-spawn": "^6.0.5",
+    "debounce": "^1.2.0",
+    "deepmerge": "^4.2.2",
+    "ejs": "^2.6.1",
+    "exec-sh": "^0.3.2",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "git-clone": "^0.1.0",
+    "globby": "^9.1.0",
+    "inquirer": "^6.5.0",
+    "isbinaryfile": "^4.0.2",
+    "kill-port": "^1.5.2",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0",
+    "md-to-bemjson": "1.0.2",
+    "node-pty": "^0.8.1",
+    "opn": "^6.0.0",
+    "ora": "^3.4.0",
+    "parse5": "^5.1.0",
+    "portfinder": "^1.0.20",
+    "recast": "^0.18.5",
+    "rimraf": "^3.0.0",
+    "schema-utils": "^2.2.0",
+    "semver": "^6.2.0",
+    "slash": "^3.0.0",
+    "socket.io": "^2.2.0",
+    "sse-pusher": "^1.1.1",
+    "tree-kill": "^1.2.1",
+    "user-home": "^2.0.0",
+    "uuid": "^3.3.3",
+    "yarn-versions": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "pre-commit": "^1.2.2"
+  },
+  "eslintIgnore": [
+    "service/assets",
+    "service/public"
+  ],
+  "pre-commit": [
+    "lint",
+    "fix"
+  ],
+  "nodemonConfig": {
+    "ignore": [
+      "service/assets",
+      "service/public"
+    ],
+    "env": {
+      "NODE_ENV": "nodemon",
+      "PORT": "9729"
+    }
+  }
+}

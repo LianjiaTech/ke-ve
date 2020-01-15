@@ -1,0 +1,16 @@
+{
+  "name": "<%=meta.fullName%>",
+  "version": "1.0.0",
+  "description": "ve-cli脚手架插件: <%=meta.desc%>",
+  "main": "cli.js",
+  "scripts": {
+    "publish": "npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cross-spawn": "^6.0.5",
+    "fs-extra": "^8.1.0"
+  }
+}

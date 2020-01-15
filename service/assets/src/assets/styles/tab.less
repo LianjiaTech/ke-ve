@@ -1,0 +1,80 @@
+.tabs-wrapper {
+  @primary-color: #5062fe;
+  @active-color: #316cff;
+
+  min-width: 1100px;
+  margin: 30px 50px;
+
+  // el样式修改
+  // tabs 头部
+  /deep/ .el-tabs__header.is-top {
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+  }
+  /deep/ .el-tabs__nav {
+    border: none !important;
+  }
+  /deep/ .el-tabs__item {
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    background-color: @primary-color;
+    opacity: 0.5;
+    border-radius: 10px 10px 0px 0px;
+    color: #fff;
+    text-align: center;
+    margin-right: 20px;
+    transition: none;
+    &.is-active {
+      border: none;
+      background-color: #fff;
+      color: @active-color;
+      opacity: 1;
+    }
+  }
+  /deep/ .el-tabs__content {
+    padding: 30px 0;
+    background-color: #fff;
+    min-height: 80vh;
+  }
+}
+
+.sub-tabs-wrapper {
+  @primary-color: #8c91b8;
+  @active-color: #316cff;
+
+  padding-left: 30px;
+
+  /deep/ .el-tabs__header.is-top {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+  }
+  /deep/ .el-tabs__nav {
+    border: none;
+  }
+  /deep/ .el-tabs__item {
+    font-size: 14px;
+    width: auto;
+    height: 50px;
+    line-height: 46px;
+    background-color: transparent;
+    opacity: 1;
+    color: @primary-color;
+    text-align: center;
+    margin: 0;
+    transition: none;
+    &.is-active {
+      // border: none;
+      background-color: transparent;
+      color: @active-color;
+    }
+  }
+  // tabs 内容区域
+  /deep/ .el-tabs__content {
+    padding: 30px 20px 30px 0;
+    background-color: #fff;
+    min-height: 80vh;
+  }
+}

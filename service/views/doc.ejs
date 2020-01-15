@@ -1,0 +1,21 @@
+<% if(data.name){ %>
+## 需求标题
+ 
+<%=data.name%>
+<%}%>
+<% if(data.des){ %>
+## 需求描述
+
+<%=data.des%>
+<%}%>
+<% if(data.remarks){ %>
+## 备注
+
+<%=data.remarks%>
+<%}%>
+<% if(data.url.length > 0){ %>
+### 需求链接
+<% for(var i=0;i<data.url.length;i++){ %>
+* <%=data.url[i].urlItems%> <% if(data.url[i].urlItems != ''){ %>:<%}%> <%=data.url[i].url%>
+<%}%>
+<%}%>
